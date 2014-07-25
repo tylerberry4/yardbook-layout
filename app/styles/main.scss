@@ -1,0 +1,131 @@
+ // Bourbon & Neat
+@import '../../bower_components/bourbon/dist/bourbon';
+@import '../../bower_components/neat/app/assets/stylesheets/neat';
+
+body {
+  margin: none;
+}
+
+header {
+  margin-top: none;
+  height: 400px;
+  // background-image: url("http://qph.cf.quoracdn.net/main-qimg-fcb98c13e50b5880858ad06928c24ebe");
+  // background-size:100% 100%;
+  // background-repeat:no-repeat;
+  background-color: #e74c3c;
+  h1{
+    margin-top: 0;
+    text-align: center;
+    position: relative;
+    top: 165px;
+    font-size: 5em;
+  }
+}
+
+nav {
+  height: 60px;
+  background-color: black;
+  text-align: center;
+  margin-bottom: 50px;
+  a {
+    background-color: #ff4d41;
+    padding: 16px 30px 17px 30px;
+    font-family: sans-serif;
+    color: white;
+    position: relative;
+    top: 17px;
+    font-size: 1.4em;
+    text-decoration: none;
+    &:hover {
+      opacity: .9;
+      color: black;
+    }
+    @media screen and (max-width: 600px) {
+    padding: 0 10px 0 10px;
+    font-size: 1.2em;
+    }
+  }
+}
+
+
+#mainContainer {
+  @include outer-container;
+}
+
+.hexContainer {
+  float: left;
+  margin: 10px;
+}
+
+.hexagon {
+  position: relative;
+  width: 250px; 
+  height: 144.34px;
+  margin: 72.17px 0;
+  background-image: url(https://avatars2.githubusercontent.com/u/6550704?s=460);
+  background-size: auto 254.0341px;
+  background-position: center;
+  border-left: solid 15px #ff4d41;
+  border-right: solid 15px #ff4d41;
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 176.78px;
+  height: 176.78px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 21.61px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 220.0000px;
+  height: 127.01705922171769px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-63.5085px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-63.5085px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-63.5085px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -88.3883px;
+  border-top: solid 21.2132px #ff4d41;
+  border-right: solid 21.2132px #ff4d41;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -88.3883px;
+  border-bottom: solid 21.2132px #ff4d41;
+  border-left: solid 21.2132px #ff4d41;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 8.6603px;
+  left: 0;
+  width: 220.0000px;
+  height: 127.0171px;
+  z-index: 2;
+  background: inherit;
+}
